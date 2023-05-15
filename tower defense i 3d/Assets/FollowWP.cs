@@ -4,24 +4,29 @@ using UnityEngine;
 
 public class FollowWP : MonoBehaviour
 {
+    //Laver en array som hedder waypoints som fortæller hvilken vej objects skal føgle
     public GameObject[] waypoints;
+    //laver en int variabel som holder styr på hvor mange waypoints der er
     int currentWP = 0;
 
+    // laver så man i unity skal skifte farten, roteringsfarten og afstanden foran objektet, hvor det næste waypoint skal kontrolleres.
     public float speed = 10.0f;
     public float rotSpeed = 10.0f;
     public float lookAhead = 10.0f;
 
-    GameObject tracker;
+    public GameObject tracker;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
+        // laver en cylinder gameobject hvor man fjerner collideren og gør den usynlig.   
         tracker = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
         DestroyImmediate(tracker.GetComponent<Collider>());
         tracker.GetComponent<MeshRenderer>().enabled = false;
+        //
         tracker.transform.position = this.transform.position;
         tracker.transform.rotation = this.transform.rotation;
     }
-    void ProgressTracker()
+    public void ProgressTracker()
     {
         if (Vector3.Distance(tracker.transform.position, this.transform.position) > lookAhead) return;
 
@@ -36,7 +41,7 @@ public class FollowWP : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         ProgressTracker();
 
