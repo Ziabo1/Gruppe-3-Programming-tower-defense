@@ -7,11 +7,12 @@ public class Turret : MonoBehaviour
 
     private Transform target;
     //"public float range = 7.5f;" defines the range of the turret
-    private float range = 7.5f;
+    public float range = 30;
 
     public string enemyTag = "Enemy";
 
     public Transform partToRotate;
+    public float turnSpeed = 10f;
 
     // Start is called before the first frame update.
     void Start()
@@ -48,7 +49,7 @@ public class Turret : MonoBehaviour
         //Following code makes the turret look at enemy entities
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
-        Vector3 rotation = lookRotation.eulerAngles;
+        Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime*turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
         }
