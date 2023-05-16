@@ -1657,11 +1657,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3140686582179769288, guid: 5f2f049e463981e439961e10d3fcdb88, type: 3}
       propertyPath: speed
-      value: 200
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 3140686582179769288, guid: 5f2f049e463981e439961e10d3fcdb88, type: 3}
       propertyPath: rotSpeed
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3140686582179769288, guid: 5f2f049e463981e439961e10d3fcdb88, type: 3}
       propertyPath: lookAhead
@@ -1858,26 +1858,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1287333237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287333225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ace0dff1a4300d4989914bf7534a3d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startSpeed: 10
-  speed: 0
-  startHealth: 100
-  health: 0
-  worth: 50
-  deathEffect: {fileID: 1444701288}
-  healthBar: {fileID: 0}
-  isDead: 0
 --- !u!4 &1361204344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5023991851421531348, guid: 604366e5029ab2542a291e509d5492b1, type: 3}

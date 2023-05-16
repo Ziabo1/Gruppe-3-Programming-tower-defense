@@ -50,7 +50,16 @@ public class FollowWP : MonoBehaviour
     void EndPath()
     {
         PlayerStats.Lives--;
-        ObjectSpawner.EnemiesAlive--;
-        Destroy(gameObject);
+        if (PlayerStats.Lives <= 0)
+        {
+            Debug.Log("Game over!");
+            // TODO: Add code to handle game over
+        }
+        else
+        {
+            Debug.Log("Life lost. Remaining lives: " + PlayerStats.Lives);
+            ObjectSpawner.EnemiesAlive--;
+            Destroy(gameObject);
+        }
     }
 }
