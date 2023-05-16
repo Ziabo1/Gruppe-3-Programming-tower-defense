@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-
+    
     private Transform target;
     //"public float range = 7.5f;" defines the range of the turret
     public float range = 30;
@@ -58,5 +58,5 @@ public class Turret : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
-    }
+    } 
 }

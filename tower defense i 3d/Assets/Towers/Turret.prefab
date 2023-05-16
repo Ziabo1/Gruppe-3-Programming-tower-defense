@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2444534282793018162}
   - component: {fileID: 6742674070065921651}
+  - component: {fileID: -3199167590019457785}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -57,8 +58,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3073542192155081096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 25.3, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 0, y: 0.575, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5023991851421531348}
@@ -78,10 +79,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01f01572743bfe44b9b89d9f0fa26610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 250
+  range: 1
   enemyTag: Enemy
   partToRotate: {fileID: 5023991851421531348}
   turnSpeed: 10
+--- !u!114 &-3199167590019457785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3073542192155081096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae8fb91626d5a344c9f58ce90ef44915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  standardTurretPrefab: {fileID: 0}
+  laserTurretPrefab: {fileID: 0}
+  missileTurretPrefab: {fileID: 0}
 --- !u!1 &3121812095409039007
 GameObject:
   m_ObjectHideFlags: 0
