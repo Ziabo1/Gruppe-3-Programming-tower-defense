@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4481520735148683301}
   - component: {fileID: 3488826467598862203}
   - component: {fileID: 4489854390972588467}
+  - component: {fileID: 7465126517038089403}
   - component: {fileID: 2685121375306428838}
   m_Layer: 0
   m_Name: Cube
@@ -84,6 +85,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7465126517038089403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332299347713064170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5467f6c662c4294ba91f6fa2aba6971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  speed: 10
+  rotSpeed: 10
+  lookAhead: 10
+  tracker: {fileID: 0}
 --- !u!65 &2685121375306428838
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -12,21 +12,25 @@ public class ObjectSpawner : MonoBehaviour
     public Vector3 despawnPosition; // Positionen, hvor objekterne skal forsvinde
     bool hasrun = false;
 
-
+   
     private int spawnedObjectsCount = 0; // Det aktuelle antal spawne objekter
 
-    private IEnumerator Start()
+
+
+
+    public IEnumerator Start()
     {
-
-
         if (hasrun)
             yield return null;
         else
         {
             yield return StartCoroutine(SpawnObjects());
+
         }
         hasrun = true;
     }
+
+   
     private IEnumerator SpawnObjects()
     {
         int spawnIterations = Mathf.CeilToInt((float)numberOfObjectsToSpawn / objectsPerSpawn);
@@ -42,15 +46,15 @@ public class ObjectSpawner : MonoBehaviour
 
                 if (spawnedObject != null)
                 {
-                    Rigidbody spawnedRigidbody = spawnedObject.AddComponent<Rigidbody>();
+                    //Rigidbody spawnedRigidbody = spawnedObject.AddComponent<Rigidbody>();
 
                     // Configure Rigidbody properties as needed
-                    spawnedRigidbody.mass = 1f;
-                    spawnedRigidbody.drag = 0.5f;
-                    spawnedRigidbody.angularDrag = 0.5f;
-                    spawnedRigidbody.useGravity = true;
-                    spawnedRigidbody.isKinematic = false;
-                    spawnedRigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+                    //spawnedRigidbody.mass = 1f;
+                    //spawnedRigidbody.drag = 0.5f;
+                    //spawnedRigidbody.angularDrag = 0.5f;
+                    //spawnedRigidbody.useGravity = true;
+                    //spawnedRigidbody.isKinematic = false;
+                    //spawnedRigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
                     // Tilføj script til det spawned objekt, der fjerner det, når det når den ønskede position
                     DespawnWhenReached script = spawnedObject.AddComponent<DespawnWhenReached>();
                     script.despawnPosition = despawnPosition;
@@ -70,7 +74,7 @@ public class DespawnWhenReached : MonoBehaviour
         public Vector3 despawnPosition; // Positionen, hvor objektet skal forsvinde
 
 
-        private void Update()
+        public void Update()
         {
             if (transform.position == despawnPosition)
             {
