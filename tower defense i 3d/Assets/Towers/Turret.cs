@@ -6,13 +6,25 @@ public class Turret : MonoBehaviour
 {
     
     private Transform target;
+    
+    [Header("Attributes")]
+    
     //"public float range = 7.5f;" defines the range of the turret
     public float range = 30;
+    //"fireRate" is the rate at which the tower shoots
+    public float fireRate = 1f;
+    //"fireCountdown" det ermines the cooldown of when the tower can fire.
+    private float fireCountdown = 0f;
+
+    [Header("Unity Setup Fields")]
 
     public string enemyTag = "Enemy";
 
     public Transform partToRotate;
-    public float turnSpeed = 10f;
+    private float turnSpeed = 20f;
+
+    public GameObject bullePrefab;
+    public Transform firePoint;
 
     // Start is called before the first frame update.
     void Start()
@@ -52,7 +64,25 @@ public class Turret : MonoBehaviour
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime*turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
+        //Following block calculates the rate of fire. It tells the turret to fire after x ammount of time determidened by the equation "fireCountdown=1f/fireRate"
+        if (fireCountdown<=0f)
+        {
+            Shoot();
+            fireCountdown=1f/fireRate;
         }
+        
+        //following code makes sure the firecountdown is reduced by one every second
+        fireCountdown -= Time.deltaTime;
+    }
+
+    void Shoot()
+    {
+        GameObject bulletGO =(GameObject) Instantiate(bullePrefab, firePoint.position, firePoint.rotation);
+        mgBulletScript bullet = bulletGO.GetComponent<mgBulletScript>();
+
+        if (bullet != null)
+            bullet.Seek(target);
+    }
 
     void OnDrawGizmosSelected ()
     {
