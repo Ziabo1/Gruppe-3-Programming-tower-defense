@@ -10,9 +10,9 @@ public class FollowWP : MonoBehaviour
     int currentWP = 0;
 
     // laver så man i unity skal skifte farten, roteringsfarten og afstanden foran objektet, hvor det næste waypoint skal kontrolleres.
-    public float speed = 10.0f;
-    public float rotSpeed = 10.0f;
-    public float lookAhead = 10.0f;
+    public float speed = 100.0f;
+    public float rotSpeed = 25.0f;
+    public float lookAhead = 200.0f;
 
     public GameObject tracker;
     // Start is called before the first frame update
