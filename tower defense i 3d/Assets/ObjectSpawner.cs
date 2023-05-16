@@ -42,15 +42,7 @@ public class ObjectSpawner : MonoBehaviour
 
                 if (spawnedObject != null)
                 {
-                    Rigidbody spawnedRigidbody = spawnedObject.AddComponent<Rigidbody>();
-
-                    // Configure Rigidbody properties as needed
-                    spawnedRigidbody.mass = 1f;
-                    spawnedRigidbody.drag = 0.5f;
-                    spawnedRigidbody.angularDrag = 0.5f;
-                    spawnedRigidbody.useGravity = true;
-                    spawnedRigidbody.isKinematic = false;
-                    spawnedRigidbody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+                 
                     // Tilføj script til det spawned objekt, der fjerner det, når det når den ønskede position
                     DespawnWhenReached script = spawnedObject.AddComponent<DespawnWhenReached>();
                     script.despawnPosition = despawnPosition;
