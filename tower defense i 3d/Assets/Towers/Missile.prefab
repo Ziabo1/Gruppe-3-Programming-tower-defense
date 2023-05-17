@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1000
   explosionRadius: 200
-  damage: 5
+  damage: 6
 --- !u!135 &3026669771488333081
 SphereCollider:
   m_ObjectHideFlags: 0
