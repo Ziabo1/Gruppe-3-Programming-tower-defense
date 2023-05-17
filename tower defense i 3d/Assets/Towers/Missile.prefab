@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 3467330098508443204}
   - component: {fileID: 1756281490449731545}
   - component: {fileID: -799196561094554100}
-  m_Layer: 0
+  - component: {fileID: 3026669771488333081}
+  m_Layer: 3
   m_Name: Missile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5108454231533877540}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -67.9, y: 16.428944, z: 0.018384345}
-  m_LocalScale: {x: 1500, y: 1499.9999, z: 1499.9999}
+  m_LocalScale: {x: 1500, y: 1500, z: 1500}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3467330098508443204
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -98,3 +99,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1000
   explosionRadius: 200
+  damage: 5
+--- !u!135 &3026669771488333081
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5108454231533877540}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.010935028
+  m_Center: {x: -0.0056000263, y: -0.0000000030267988, z: -0.000000008498319}

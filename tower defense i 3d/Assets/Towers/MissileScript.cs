@@ -47,7 +47,7 @@ public class MissileScript : MonoBehaviour
                 nearestEnemy = enemy;
             }
         }
-
+        //Following code makes projectile face the target enemy
         if (nearestEnemy != null && shortestDistance <= range)
         {
             target = nearestEnemy.transform;

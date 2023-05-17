@@ -261,6 +261,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 298012929}
+        m_TargetAssemblyTypeName: TowerPlacement, Assembly-CSharp
+        m_MethodName: SetTurretToPlace
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3831751914815921817, guid: 876a18ca8daa35041bba195c09e51f26, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &45897547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,7 +340,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &71781006
 GameObject:
@@ -820,7 +832,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &499337507
 GameObject:
@@ -1604,7 +1616,7 @@ PrefabInstance:
       objectReference: {fileID: 237923356}
     - target: {fileID: 4481520735148683301, guid: 5f2f049e463981e439961e10d3fcdb88, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4481520735148683301, guid: 5f2f049e463981e439961e10d3fcdb88, type: 3}
       propertyPath: m_LocalScale.x
@@ -1975,7 +1987,7 @@ PrefabInstance:
       objectReference: {fileID: 237923356}
     - target: {fileID: 4481520735148683301, guid: 5f2f049e463981e439961e10d3fcdb88, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4481520735148683301, guid: 5f2f049e463981e439961e10d3fcdb88, type: 3}
       propertyPath: m_LocalScale.x
@@ -2754,6 +2766,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 298012929}
+        m_TargetAssemblyTypeName: TowerPlacement, Assembly-CSharp
+        m_MethodName: SetTurretToPlace
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7716191786660637070, guid: 8829296e8ebf7f54dae619412af6c4b0, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3587,7 +3611,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1925127244
 PrefabInstance:
@@ -3674,7 +3698,7 @@ PrefabInstance:
       objectReference: {fileID: 237923356}
     - target: {fileID: 4481520735148683301, guid: 5f2f049e463981e439961e10d3fcdb88, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4481520735148683301, guid: 5f2f049e463981e439961e10d3fcdb88, type: 3}
       propertyPath: m_LocalScale.x

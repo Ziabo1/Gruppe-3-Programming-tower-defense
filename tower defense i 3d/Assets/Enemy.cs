@@ -31,13 +31,15 @@ public class Enemy : MonoBehaviour
 	public void TakeDamage(float amount)
 	{
 		health -= amount;
-
 		healthBar.fillAmount = health / startHealth;
 
 		if (health <= 0 && !isDead)
 		{
 			Die();
 		}
+
+		// Debug log to check if the TakeDamage method is being called
+		Debug.Log("Enemy took damage: " + amount);
 	}
 
 	public void Slow(float pct)

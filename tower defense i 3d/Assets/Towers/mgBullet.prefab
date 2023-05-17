@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 8233047816092421013}
   - component: {fileID: 7104068822987020686}
   - component: {fileID: 5322208956599622881}
-  m_Layer: 0
+  - component: {fileID: 8806870979369460190}
+  m_Layer: 3
   m_Name: mgBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,3 +99,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1000
   explosionRadius: 0
+  damage: 10
+--- !u!135 &8806870979369460190
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646964872448410158}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}

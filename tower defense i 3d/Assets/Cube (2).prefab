@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5833191000347644356}
   - component: {fileID: 6063128762916931016}
   - component: {fileID: 1525049553919414068}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   speed: 10
   rotSpeed: 10
   lookAhead: 10
-  tracker: {fileID: 0}
+  Health: 10
 --- !u!65 &1525049553919414068
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ public class LaserScript : MonoBehaviour
 
     [Header("Attributes")]
 
-    //"public float range = 7.5f;" defines the range of the turret
+    //"public float range = x;" defines the range of the turret. By making it public, it can be adjusted in the unity editor.
     public float range = 30;
     //"fireRate" is the rate at which the tower shoots
     public float fireRate = 1f;
