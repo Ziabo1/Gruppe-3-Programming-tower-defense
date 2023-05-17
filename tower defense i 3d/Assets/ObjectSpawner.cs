@@ -15,8 +15,13 @@ public class ObjectSpawner : MonoBehaviour
     public static int EnemiesAlive = 0; // is a variable that keeps track of the number of enemies currently alive in the game.
     public Wave[] waves; // An array of Wave objects that define the properties of each wave.
     public float timeBetweenWaves = 5f;// The delay between each wave.
+<<<<<<< HEAD
     private float countdown = 2f; // Tælleren til nedtællingen mellem bølger.
     public GameManager gameManager; // Reference til GameManager-scriptet.
+=======
+    private float countdown = 2f; 
+    public GameManager gameManager;
+>>>>>>> f9b70d16872174d7d4b9683dad607b242f53a5cb
     //public Text waveCountdownText;
     public List<GameObject> spawnedObjectList; // En liste over de spawnede objekter.
 
