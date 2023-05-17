@@ -7,15 +7,14 @@ public class GameManager : MonoBehaviour
 {
     public static bool GameIsOver;
 
-    public GameObject GameOverUI;
-    public GameObject completeLevelUI;
-    // Start is called before the first frame update
+    public GameObject GameOverUI; // UI object for displaying the game over screen
+    public GameObject completeLevelUI; // UI object for displaying the level completion screen
+
     void Start()
     {
-        GameIsOver = false;
+        GameIsOver = false; // Set the initial state of the game to not over
     }
 
-    // Update is called once per frame
     public void Update()
     {
         if (GameIsOver)
@@ -24,20 +23,19 @@ public class GameManager : MonoBehaviour
         if (PlayerStats.Lives <= 0)
         {
             Debug.Log("Game over!");
-            EndGame();
+            EndGame(); // Call the EndGame function when the player's lives reach zero
         }
     }
+
     public void EndGame()
     {
-        GameIsOver = true;
-        GameOverUI.SetActive(true);
+        GameIsOver = true; // Set the game over state to true
+        GameOverUI.SetActive(true); // Show the game over UI
     }
 
     public void WinLevel()
     {
-        GameIsOver = true;
-      completeLevelUI.SetActive(true);
+        GameIsOver = true; // Set the game over state to true
+        completeLevelUI.SetActive(true); // Show the level completion UI
     }
-
-
 }
