@@ -6,15 +6,15 @@ using UnityEngine.UI;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    public GameObject objectToSpawn; // Objektet, der skal spawnes
-    public int numberOfObjectsToSpawn; // Antallet af objekter, der skal spawnes
-    public int objectsPerSpawn = 5; // Antallet af objekter pr. spawning
-    public Transform spawnLocation; // Spawndestinationen
-    public float spawnDelay = 5f; // Forsinkelse mellem hver spawning (ændret til 5 sekunder)
-    bool hasrun = false;
-    public static int EnemiesAlive = 0;
-    public Wave[] waves;
-    public float timeBetweenWaves = 5f;
+    public GameObject objectToSpawn; // The GameObject that will be spawned.
+    public int numberOfObjectsToSpawn; // The total number of objects to spawn.
+    public int objectsPerSpawn = 5; // The number of objects to spawn in each iteration.
+    public Transform spawnLocation; // The position where the objects will be spawned.
+    public float spawnDelay = 5f; // The delay between each spawning.
+    bool hasrun = false; // An array of Wave objects that define the properties of each wave.
+    public static int EnemiesAlive = 0; // is a variable that keeps track of the number of enemies currently alive in the game.
+    public Wave[] waves; // An array of Wave objects that define the properties of each wave.
+    public float timeBetweenWaves = 5f;// The delay between each wave.
     private float countdown = 2f;
     public GameManager gameManager;
     //public Text waveCountdownText;
