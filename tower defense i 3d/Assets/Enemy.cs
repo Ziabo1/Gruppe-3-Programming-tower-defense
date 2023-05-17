@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthStats : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
 	public float startSpeed = 10f;
 

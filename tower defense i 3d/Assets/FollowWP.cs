@@ -47,14 +47,15 @@ public class FollowWP : MonoBehaviour
         }
     }
 
-    void EndPath()
+    public void EndPath()
     {
         PlayerStats.Lives--;
         if (PlayerStats.Lives <= 0)
         {
             Debug.Log("Game over!");
             // TODO: Add code to handle game over
-
+            GameManager gameManager = FindObjectOfType<GameManager>();
+            gameManager.EndGame();
             // Destroy the game object associated with this script
             Destroy(gameObject);
         }

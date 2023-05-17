@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static bool GameIsOver;
 
-    public GameObject gameOverUI;
+    public GameObject GameOverUI;
     public GameObject completeLevelUI;
     // Start is called before the first frame update
     void Start()
@@ -16,20 +16,21 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (GameIsOver)
             return;
 
         if (PlayerStats.Lives <= 0)
         {
+            Debug.Log("Game over!");
             EndGame();
         }
     }
-    void EndGame()
+    public void EndGame()
     {
         GameIsOver = true;
-     gameOverUI.SetActive(true);
+        GameOverUI.SetActive(true);
     }
 
     public void WinLevel()

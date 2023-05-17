@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,11 +18,12 @@ public class ObjectSpawner : MonoBehaviour
     private float countdown = 2f;
     public GameManager gameManager;
     //public Text waveCountdownText;
-    
+    public List<GameObject> spawnedObjectList;
+
 
 
     private int waveIndex = 0;
-    private int spawnedObjectsCount = 0; // Det aktuelle antal spawne objekter
+    private int spawnedObjectsCountPerWave = 0; // Det aktuelle antal spawne objekter
 
     private void Update()
     {
@@ -47,11 +49,11 @@ public class ObjectSpawner : MonoBehaviour
 
         countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
 
-       // waveCountdownText.text = string.Format("{0:00.00}", countdown);
+        // waveCountdownText.text = string.Format("{0:00.00}", countdown);
     }
 
 
-    private IEnumerator Start()
+    public IEnumerator Start()
     {
 
 
@@ -65,23 +67,40 @@ public class ObjectSpawner : MonoBehaviour
     }
     private IEnumerator SpawnObjects()
     {
-        int spawnIterations = Mathf.CeilToInt((float)numberOfObjectsToSpawn / objectsPerSpawn);
-        if (spawnedObjectsCount >= numberOfObjectsToSpawn)
-            yield return new WaitForSeconds(spawnDelay);
-        for (int i = 0; i < spawnIterations; i++)
+
+        if (IsListEmpty(spawnedObjectList))
         {
-            int objectsToSpawn = Mathf.Min(objectsPerSpawn, numberOfObjectsToSpawn - spawnedObjectsCount);
-
-            for (int j = 0; j < objectsToSpawn; j++)
+            // ObjectSpawner.Rounds++;
+            
+            int spawnIterations = Mathf.CeilToInt((float)numberOfObjectsToSpawn / objectsPerSpawn);
+            if (spawnedObjectsCountPerWave >= numberOfObjectsToSpawn)
+                yield return new WaitForSeconds(spawnDelay);
+            for (int i = 0; i < spawnIterations; i++)
             {
-                GameObject spawnedObject = Instantiate(objectToSpawn, spawnLocation.position, Quaternion.identity);
+                int objectsToSpawn = Mathf.Min(objectsPerSpawn, numberOfObjectsToSpawn - spawnedObjectsCountPerWave);
+
+                for (int j = 0; j < objectsToSpawn; j++)
+                {
+                    GameObject spawnedObject = Instantiate(objectToSpawn, spawnLocation.position, Quaternion.identity);
+                    spawnedObjectList.Add(spawnedObject);
+                }
+
+                spawnedObjectsCountPerWave += objectsToSpawn;
+
+                yield return new WaitForSeconds(spawnDelay);
             }
-
-            spawnedObjectsCount += objectsToSpawn;
-
-
-
-            yield return new WaitForSeconds(spawnDelay);
         }
+
+    }
+
+    private bool IsListEmpty(List<GameObject> spawnedObjectListPerWave)
+    {
+        if (spawnedObjectListPerWave.Any(i => i != null))
+        {
+            return false;
+        }
+        spawnedObjectListPerWave.Clear();
+        spawnedObjectsCountPerWave = 0;
+        return true;
     }
 }
