@@ -63,6 +63,12 @@ public class FollowWP : MonoBehaviour
         // Move the enemy forward
         transform.Translate(0, 0, speed * Time.deltaTime);
 
+        if (currentWP == waypoints.Length - 1)
+        {
+            EndPath();
+            Destroy(gameObject);
+        }
+
         // Check if the enemy's health is depleted
         if (Health <= 0)
         {
@@ -75,7 +81,7 @@ public class FollowWP : MonoBehaviour
     {
         // Decrease the enemy's health by the given amount
         Health -= amount;
-
+       
         // Check if the enemy's health is depleted
         if (Health <= 0)
         {

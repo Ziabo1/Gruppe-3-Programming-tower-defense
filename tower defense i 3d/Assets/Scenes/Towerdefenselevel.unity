@@ -1175,7 +1175,7 @@ MonoBehaviour:
   spawnDelay: 5
   waves:
   - enemy: {fileID: 1287333225}
-    Count: 2
+    Count: 20
     Health: 20
   - enemy: {fileID: 1824552093}
     Count: 4
