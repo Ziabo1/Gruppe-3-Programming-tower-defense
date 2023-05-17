@@ -6,25 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class CompleteLevel : MonoBehaviour
 {
-    public string menuSceneName = "MainMenu";
-  
-    public Text roundsText;
+    public string menuSceneName = "MainMenu"; // Name of the menu scene to load
 
-    // Start is called before the first frame update
+    public Text roundsText; // Reference to the Text component for displaying the number of rounds
+
     private void OnEnable()
     {
-        roundsText.text = PlayerStats.Rounds.ToString();
+        roundsText.text = PlayerStats.Rounds.ToString(); // Update the rounds text with the current number of rounds
     }
+
     public void Retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reload the current scene
     }
 
     public void Menu()
     {
-        Debug.Log("Go To menu.");
+        Debug.Log("Go To menu."); // Placeholder code for going back to the menu
     }
-
-    
-
 }
