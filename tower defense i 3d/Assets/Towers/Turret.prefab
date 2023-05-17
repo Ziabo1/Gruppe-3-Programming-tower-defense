@@ -81,10 +81,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 500
-  fireRate: 1
+  fireRate: 5
   enemyTag: Enemy
   partToRotate: {fileID: 5023991851421531348}
-  turnSpeed: 20
   bullePrefab: {fileID: 1646964872448410158, guid: c67cbdd5c0be6b44fbf6b6f7345aa0a7, type: 3}
   firePoint: {fileID: 1933855512746081627}
 --- !u!114 &-3199167590019457785
@@ -295,7 +294,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7937104359344317484}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.20746428, z: 0.873}
+  m_LocalPosition: {x: 0, y: 0.20746428, z: 1.031}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

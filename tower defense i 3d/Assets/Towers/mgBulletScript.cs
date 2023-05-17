@@ -3,7 +3,8 @@ using UnityEngine;
 public class mgBulletScript : MonoBehaviour
 {
     private Transform target;
-    private float speed = 200;
+    public float speed = 0;
+    public float explosionRadius = 0f;
     public void Seek(Transform _target)
     {
         target = _target;
@@ -11,7 +12,7 @@ public class mgBulletScript : MonoBehaviour
 
     void Update()
     {
-   
+
         if (target == null)
         {
             Destroy(gameObject);
@@ -28,10 +29,35 @@ public class mgBulletScript : MonoBehaviour
         }
 
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
+        transform.LookAt(target);
     }
 
     void HitTarget()
     {
-        Debug.Log("WE HIT SOMETHING");
+        if (explosionRadius > 0f)
+        {
+            Explode();
+        }
+        else
+        {
+            Damage(target);
+        }
+        Destroy(gameObject);
+    }
+
+    void Explode()
+    {
+        Collider[]colliders=Physics.OverlapSphere(transform.position,explosionRadius);
+        foreach(Collider collider in colliders)
+        {
+            if(collider.tag=="Enemy")
+            {
+                Damage(collider.transform);
+            }
+        }
+    }
+    void Damage(Transform enemy)
+    {
+        Destroy(enemy.gameObject);
     }
 }
