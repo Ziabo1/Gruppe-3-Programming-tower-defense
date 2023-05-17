@@ -60,4 +60,11 @@ public class mgBulletScript : MonoBehaviour
     {
         Destroy(enemy.gameObject);
     }
+
+    //These codes can be deleted later. It just shows what the given range is in the unity editor
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
+    }
 }

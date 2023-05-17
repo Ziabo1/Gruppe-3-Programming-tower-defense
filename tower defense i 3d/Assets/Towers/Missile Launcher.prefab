@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134516461130093989}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -37.950012, y: 18.300001, z: -0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 18.300003, z: 37.950085}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7451524904018423844}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3117262198628966223
 GameObject:
@@ -138,16 +138,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4397673563080814756}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.06666667, y: 0.06666667, z: 0.06666667}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6999557632292816008}
   - {fileID: 713153548632964000}
+  - {fileID: 6999557632292816008}
   m_Father: {fileID: 6944193424316822324}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7701408616917120665
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,13 +173,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7701408616917120665}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 4.2, z: -0}
-  m_LocalScale: {x: 1500, y: 1499.9999, z: 1499.9999}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: 4.2, z: 0}
+  m_LocalScale: {x: 1500, y: 1499.9999, z: 1500}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7451524904018423844}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &5143759052288278919
 MeshFilter:
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 1000
-  fireRate: 1
+  fireRate: 0.5
   enemyTag: Enemy
   partToRotate: {fileID: 7451524904018423844}
   bullePrefab: {fileID: 5108454231533877540, guid: 638965706f219bd44ab50d714ee49733, type: 3}
