@@ -4,25 +4,23 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static int Money;
-    public int startMoney = 400;
+    public static int Money; // Static variable to store the player's money
+    public int startMoney = 400; // Initial amount of money for the player
 
-    public static int Lives;
-    public int startLives = 20;
+    public static int Lives; // Static variable to store the player's lives
+    public int startLives = 20; // Initial number of lives for the player
 
-    public static int Rounds;
-    // Start is called before the first frame update
+    public static int Rounds; // Static variable to store the current round number
+
     void Start()
     {
-        Money = startMoney;
-        Lives = startLives;
-
-        Rounds = 0;
+        Money = startMoney; // Set the initial amount of money for the player
+        Lives = startLives; // Set the initial number of lives for the player
+        Rounds = 0; // Set the initial round number to 0
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // Update logic can be added here if needed
     }
 }

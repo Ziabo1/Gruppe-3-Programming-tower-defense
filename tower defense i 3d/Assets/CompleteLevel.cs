@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Gameover : MonoBehaviour
+public class CompleteLevel : MonoBehaviour
 {
     public string menuSceneName = "MainMenu"; // Name of the menu scene to load
 
