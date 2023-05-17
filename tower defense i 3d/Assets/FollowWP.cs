@@ -54,6 +54,9 @@ public class FollowWP : MonoBehaviour
         {
             Debug.Log("Game over!");
             // TODO: Add code to handle game over
+
+            // Destroy the game object associated with this script
+            Destroy(gameObject);
         }
         else
         {
