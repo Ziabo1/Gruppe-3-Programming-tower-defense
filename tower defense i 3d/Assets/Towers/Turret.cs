@@ -84,6 +84,7 @@ public class Turret : MonoBehaviour
             bullet.Seek(target);
     }
 
+    //These codes can be deleted later. It just shows what the given range is in the unity editor
     void OnDrawGizmosSelected ()
     {
         Gizmos.color = Color.red;

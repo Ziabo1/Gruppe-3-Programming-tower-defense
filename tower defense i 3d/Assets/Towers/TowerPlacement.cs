@@ -23,7 +23,7 @@ public class TowerPlacement : MonoBehaviour
         {
             Ray camray = PlayerCamera.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(camray, out RaycastHit hitInfo, 100f))
+            if (Physics.Raycast(camray, out RaycastHit hitInfo, 10000f))
             {
                 CurrentPlacingTurret.transform.position = hitInfo.point;
             }
