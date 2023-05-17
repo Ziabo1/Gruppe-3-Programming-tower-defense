@@ -10,7 +10,7 @@ public class FollowWP : MonoBehaviour
     public float speed = 100.0f;
     public float rotSpeed = 25.0f;
     public float lookAhead = 200.0f;
-
+    public int Health = 10;
     public void Start()
     {
         tracker = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
@@ -25,7 +25,7 @@ public class FollowWP : MonoBehaviour
         if (Vector3.Distance(tracker.transform.position, transform.position) > lookAhead)
             return;
 
-        if (Vector3.Distance(tracker.transform.position, waypoints[currentWP].transform.position) < 3)
+        if (Vector3.Distance(tracker.transform.position, waypoints[currentWP].transform.position) < 1)
             currentWP = (currentWP + 1) % waypoints.Length;
 
         tracker.transform.LookAt(waypoints[currentWP].transform);
@@ -45,6 +45,10 @@ public class FollowWP : MonoBehaviour
         {
             EndPath();
         }
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void EndPath()
@@ -53,7 +57,7 @@ public class FollowWP : MonoBehaviour
         if (PlayerStats.Lives <= 0)
         {
             Debug.Log("Game over!");
-            // TODO: Add code to handle game over
+           
             GameManager gameManager = FindObjectOfType<GameManager>();
             gameManager.EndGame();
             // Destroy the game object associated with this script

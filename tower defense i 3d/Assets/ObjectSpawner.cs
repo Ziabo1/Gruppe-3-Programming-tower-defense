@@ -72,25 +72,41 @@ public class ObjectSpawner : MonoBehaviour
         {
             // ObjectSpawner.Rounds++;
             
-            int spawnIterations = Mathf.CeilToInt((float)numberOfObjectsToSpawn / objectsPerSpawn);
-            if (spawnedObjectsCountPerWave >= numberOfObjectsToSpawn)
+            int spawnIterations = Mathf.CeilToInt((float)numberOfWaveObjectsToSpawn() / objectsPerSpawn);
+            if (spawnedObjectsCountPerWave >= numberOfWaveObjectsToSpawn())
                 yield return new WaitForSeconds(spawnDelay);
             for (int i = 0; i < spawnIterations; i++)
             {
-                int objectsToSpawn = Mathf.Min(objectsPerSpawn, numberOfObjectsToSpawn - spawnedObjectsCountPerWave);
+                int objectsToSpawn = Mathf.Min(objectsPerSpawn, numberOfWaveObjectsToSpawn() - spawnedObjectsCountPerWave);
 
                 for (int j = 0; j < objectsToSpawn; j++)
                 {
-                    GameObject spawnedObject = Instantiate(objectToSpawn, spawnLocation.position, Quaternion.identity);
+                    GameObject spawnedObject = Instantiate(getWaveobjectToSpawn(), spawnLocation.position, Quaternion.identity);
+                    spawnedObject.GetComponent<FollowWP>().Health = getWaveobjectHealth();
                     spawnedObjectList.Add(spawnedObject);
+                    
                 }
 
                 spawnedObjectsCountPerWave += objectsToSpawn;
 
                 yield return new WaitForSeconds(spawnDelay);
             }
+            waveIndex++;
         }
 
+    }
+
+    private int numberOfWaveObjectsToSpawn() {
+        return waves[waveIndex].Count;
+    }
+
+    private int getWaveobjectHealth()
+    {
+        return waves[waveIndex].Health;
+    }
+
+    private GameObject getWaveobjectToSpawn() { 
+      return waves[waveIndex].enemy;
     }
 
     private bool IsListEmpty(List<GameObject> spawnedObjectListPerWave)
