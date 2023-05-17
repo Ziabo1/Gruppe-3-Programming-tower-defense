@@ -180,10 +180,10 @@ RectTransform:
   m_Father: {fileID: 252454763}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 963, y: -24.13875}
+  m_SizeDelta: {x: 100, y: 48.2775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &45897545
 MonoBehaviour:
@@ -366,10 +366,10 @@ RectTransform:
   m_Father: {fileID: 252454763}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 833, y: -24.13875}
+  m_SizeDelta: {x: 100, y: 48.2775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &71781008
 MonoBehaviour:
@@ -1175,7 +1175,7 @@ MonoBehaviour:
   spawnDelay: 5
   waves:
   - enemy: {fileID: 1287333225}
-    Count: 20
+    Count: 1
     Health: 20
   - enemy: {fileID: 1824552093}
     Count: 4
@@ -2666,10 +2666,10 @@ RectTransform:
   m_Father: {fileID: 252454763}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1093, y: -24.13875}
+  m_SizeDelta: {x: 100, y: 48.2775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1499557130
 MonoBehaviour:
